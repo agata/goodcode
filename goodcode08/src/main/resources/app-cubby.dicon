@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    Copyright 2004-2010 the Seasar Foundation and the Others.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
+    either express or implied. See the License for the specific language
+    governing permissions and limitations under the License.
+
+-->
+
+<!DOCTYPE components PUBLIC "-//SEASAR//DTD S2Container 2.4//EN"
+	"http://www.seasar.org/dtd/components24.dtd">
+<components namespace="app-cubby">
+	<include path="cubby-converters.dicon"/>
+
+	<!-- date and time format patterns -->
+	<component class="org.seasar.cubby.controller.impl.DefaultFormatPattern">
+		<property name="datePattern">"yyyy-MM-dd"</property>
+		<property name="timePattern">"HH:mm:ss"</property>
+		<property name="timestampPattern">"yyyy-MM-dd HH:mm:ss"</property>
+	</component>
+
+	<!-- request parsers -->
+	<component name="multipartRequestParser" class="org.seasar.cubby.controller.impl.MultipartRequestParser" />
+	<component name="defaultRequestParser" class="org.seasar.cubby.controller.impl.DefaultRequestParser" />
+	<component name="requestParsers">
+		{ multipartRequestParser, defaultRequestParser }
+	</component>
+
+	<!-- file upload -->
+	<component class="org.apache.commons.fileupload.servlet.ServletFileUpload" instance="prototype">
+		<property name="fileItemFactory">
+			<component class="org.apache.commons.fileupload.disk.DiskFileItemFactory">
+				<property name="sizeThreshold">4096</property>
+			</component>
+		</property>
+		<property name="fileSizeMax">10000000</property>
+	</component>
+
+	<component class="org.apache.commons.fileupload.servlet.ServletRequestContext" instance="prototype"/>
+
+	<!-- messages behaviour -->
+	<component class="org.seasar.cubby.controller.impl.DefaultMessagesBehaviour">
+		<property name="baseName">"messages"</property>
+	</component>
+
+	<!-- OVal -->
+	<component class="org.seasar.cubby.plugins.oval.validation.RequestLocaleMessageResolver"/>
+	<component class="org.seasar.cubby.plugins.oval.validation.RequestLocaleOValContextRenderer"/>
+
+</components>
