@@ -152,7 +152,7 @@ mvn clean package tomcat:run
 
 2.次のコマンドを実行します。
 
-mvn clean install tomcat:run
+mvn clean install
 
 フレームワークのJARファイルがMavenのローカルリポジトリにインストールされます。
 
