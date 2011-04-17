@@ -52,14 +52,13 @@ public class DispatcherServlet extends HttpServlet {
 		}
 	}
 
-	@SuppressWarnings("rawtypes")
 	private Action findAction(String path) throws ServletException {
 		if (!route.containsKey(path)) {
 			return null;
 		}
 		String className = route.getProperty(path);
 		try {
-			Class clazz = Class.forName(className);
+			Class<?> clazz = Class.forName(className);
 			return (Action) clazz.newInstance();
 		} catch (Exception e) {
 			throw new ServletException("アクションの生成に失敗しました", e);
