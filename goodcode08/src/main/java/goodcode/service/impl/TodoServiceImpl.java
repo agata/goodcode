@@ -2,8 +2,10 @@ package goodcode.service.impl;
 
 import java.util.List;
 
-import org.seasar.extension.jdbc.JdbcManager;
-import org.seasar.framework.container.annotation.tiger.Binding;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.BeanPropertyRowMapper;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Service;
 
 import goodcode.entity.Todo;
 import goodcode.service.TodoService;
@@ -11,19 +13,22 @@ import goodcode.service.TodoService;
 /**
  * {@link TodoService}の実装クラス
  */
+@Service
 public class TodoServiceImpl implements TodoService {
 
-	@Binding
-	public JdbcManager jdbcManager;
-	
+	@Autowired
+	private JdbcTemplate jdbcTemplate;
+  
 	@Override
-	public Todo findById(Integer id) {
-		return jdbcManager.from(Todo.class).id(id).getSingleResult();
+	public Todo findById(final Integer id) {
+		var query = "select * from todo where id = ?";
+		return jdbcTemplate.queryForObject(query, new Object[] {id}, new BeanPropertyRowMapper<Todo>(Todo.class));
 	}
-	
+
 	@Override
-	public List<Todo> findByAccountId(Integer accountId) {
-		return jdbcManager.from(Todo.class).where("account_id=?", accountId).orderBy("id").getResultList();
+	public List<Todo> findByAccountId(final Integer accountId) {
+		var query = "select * from todo where account_id = ?";
+		return jdbcTemplate.query(query, new Object[] {accountId}, new BeanPropertyRowMapper<Todo>(Todo.class));
 	}
 
 }

@@ -1,18 +1,22 @@
 package goodcode.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-
 /**
  * ToDoのエンティティクラス
  */
-@Entity
 public class Todo {
 
-	@Id
 	private Integer id;
 	private Integer accountId;
 	private String content;
+
+	public Todo() {
+	}
+
+	public Todo(Integer id, Integer accountId, String content) {
+		this.id = id;
+		this.accountId = accountId;
+		this.content = content;
+	}
 
 	public Integer getId() {
 		return id;
