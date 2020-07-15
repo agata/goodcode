@@ -1,4 +1,4 @@
-package goodcode.action;
+package goodcode.controllers;
 
 import goodcode.util.FileUtil;
 
@@ -8,16 +8,16 @@ import java.util.List;
 
 import javax.servlet.ServletContext;
 
-import org.seasar.cubby.action.Action;
-import org.seasar.cubby.action.ActionResult;
-import org.seasar.cubby.action.Forward;
-import org.seasar.cubby.action.Path;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
  * Step4:配列/コレクション化
  */
-@Path("/")
-public class Step4Action extends Action {
+@Controller
+public class Step4Action {
 	
 	public static final String[] PATHS = {
 		"/images/food",
@@ -25,20 +25,21 @@ public class Step4Action extends Action {
 		"/images/landscape"
 	};
 	
+	@Autowired
 	public ServletContext context;
-	public List<ImageFiles> filesList;
 	
-	public ActionResult step4() {
-		List<ImageFiles> filesList = new ArrayList<ImageFiles>();
-		for (String path : PATHS) {
+	@RequestMapping("/step4")
+	public String step4(Model model) {
+		var filesList = new ArrayList<ImageFiles>();
+		for (var path : PATHS) {
 			filesList.add(getFiles(path));
 		}
-		this.filesList = filesList;
-		return new Forward("step4.jsp");
+		model.addAttribute("filesList", filesList);
+		return "step4";
 	}
 	
 	private ImageFiles getFiles(String path) {
-		File[] files =  new File(context.getRealPath(path)).listFiles();
+		var files =  new File(context.getRealPath(path)).listFiles();
 		return new ImageFiles(path, files);
 	}
 
