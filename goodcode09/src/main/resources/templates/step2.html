@@ -1,24 +1,27 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta http-equiv="Content-Style-Type" content="text/css" />
   <meta http-equiv="Content-Script-Type" content="text/JavaScript" />
   <link th:href="@{/css/default.css}" rel="stylesheet" type="text/css" media="screen,projection" charset="utf-8" />
 </head>
+
 <body>
-<h1>Image File List</h1>
-<h2>Food Photos(<span th:text="${foodSize / 1024}"></span>KB)</h2>
-<ul>
-<li th:each="file : ${foodFiles}" th:text="${file.name}"></li>
-</ul>
-<h2>Animal Photos(<span th:text="${animalSize / 1024}"></span>KB)</h2>
-<ul>
-<li th:each="file : ${animalFiles}" th:text="${file.name}"></li>
-</ul>
-<h2>Landscape Photos(<span th:text="${landscapeSize / 1024}"></span>KB)</h2>
-<ul>
-<li th:each="file : ${landscapeFiles}" th:text="${file.name}"></li>
-</ul>
+  <h1>Image File List</h1>
+  <h2>Food Photos(<span th:text="${foodSize / 1024}"></span>KB)</h2>
+  <ul>
+    <li th:each="file : ${foodFiles}" th:text="${file.name}"></li>
+  </ul>
+  <h2>Animal Photos(<span th:text="${animalSize / 1024}"></span>KB)</h2>
+  <ul>
+    <li th:each="file : ${animalFiles}" th:text="${file.name}"></li>
+  </ul>
+  <h2>Landscape Photos(<span th:text="${landscapeSize / 1024}"></span>KB)</h2>
+  <ul>
+    <li th:each="file : ${landscapeFiles}" th:text="${file.name}"></li>
+  </ul>
 </body>
+
 </html>
