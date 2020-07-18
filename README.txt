@@ -143,7 +143,7 @@ mvn exec:java -Dexec.mainClass="goodcode.mapping.Main"
 
 2.次のコマンドを実行します。
 
-mvn clean package tomcat:run
+mvn clean package tomcat7:run
 
 3.「http://localhost:8080/goodcode11/」にブラウザでアクセスします。
 
@@ -160,6 +160,6 @@ mvn clean install
 
 4.次のコマンドを実行します。
 
-mvn clean package tomcat:run
+mvn clean package tomcat7:run
 
 5.「http://localhost:8080/goodcode11/」にブラウザでアクセスします。
