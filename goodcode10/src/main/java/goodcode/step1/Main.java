@@ -7,13 +7,12 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
-import java.util.Map;
 
 import org.apache.commons.io.FileUtils;
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 
 /**
- * リスト10.1	ベタなコード
+ * リスト10.1 ベタなコード
  */
 public class Main {
 	public static void main(String[] args) throws Exception {
@@ -32,7 +31,7 @@ public class Main {
 		
 		public void parse() {
 			while (index < bytes.getLength() - 1) {
-				Map<String, Object> record = new HashMap<String, Object>();
+				var record = new HashMap<String, Object>();
 				record.put("送信日", toDate(getString(8)));
 				record.put("ユーザ名", trim(getString(10)));
 				record.put("メールアドレス", trim(getString(20)));
@@ -53,7 +52,7 @@ public class Main {
 	}
 
 	private static String trim(String value) {
-		return StringUtils.trim(value);
+		return StringUtils.trimToEmpty(value);
 	}
 
 	private static Date toDate(String value) {

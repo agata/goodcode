@@ -12,8 +12,7 @@ import java.util.Map;
 import junit.framework.TestCase;
 
 import org.apache.commons.io.FileUtils;
-import org.seasar.extension.dataset.DataTable;
-import org.seasar.extension.dataset.impl.XlsReader;
+import org.junit.Test;
 
 /**
  * 考察　DSLのテストはどうする？
@@ -25,10 +24,10 @@ public class SampleTest extends TestCase {
 	@Override
 	protected void setUp() throws Exception {
 		byte[] messages = FileUtils.readFileToByteArray(new File("data.txt"));
-		DataTable config = new XlsReader(new File("config.xls")).read().getTable(0);
-		parser = new MessageParser(messages, config);
+		parser = new MessageParser(messages, Main2.fields);
 	}
 	
+	@Test
 	public void testParse() throws Exception {
 		List<Map<String, Object>> records = parser.parse();
 		assertEquals("データ件数のチェック", 5, records.size());
