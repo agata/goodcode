@@ -5,9 +5,9 @@ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
 
 public class ServletInitializer extends SpringBootServletInitializer {
 
-	@Override
-	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-		return application.sources(Goodcode08Application.class);
-	}
+    @Override
+    protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+        return application.sources(Goodcode09Application.class);
+    }
 
 }
