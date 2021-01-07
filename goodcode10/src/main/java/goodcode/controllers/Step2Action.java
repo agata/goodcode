@@ -37,7 +37,7 @@ public class Step2Action {
         return "step2";
     }
 
-    private static File[] getFiles(String path) {
+    private File[] getFiles(String path) {
         var files = new File(context.getRealPath(path)).listFiles();
         return files;
     }
