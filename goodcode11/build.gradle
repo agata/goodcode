@@ -1,0 +1,25 @@
+plugins {
+	id 'java'
+	id 'eclipse'
+}
+
+group = 'goodcode11'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '14'
+
+repositories {
+	mavenCentral()
+}
+
+configurations {
+    developmentOnly
+    runtimeClasspath {
+        extendsFrom developmentOnly
+    }
+}
+
+dependencies {
+    compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.11'
+	compile group: 'commons-io', name: 'commons-io', version: '2.8.0'
+    testCompile group: 'junit', name: 'junit', version: '4.13.1'
+}
