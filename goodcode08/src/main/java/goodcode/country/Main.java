@@ -1,6 +1,6 @@
 package goodcode.country;
 /**
- * リスト7.1	国別の出現数をカウントするコード
+ * リスト8.1	国別の出現数をカウントするコード
  */
 public class Main {
     public static void main(String[] args) {

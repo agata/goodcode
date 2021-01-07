@@ -1,5 +1,5 @@
 package goodcode.cache;
 
-public class Action {
+public class Controller {
 
 }
