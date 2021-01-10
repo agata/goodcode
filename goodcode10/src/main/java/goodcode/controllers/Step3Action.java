@@ -25,6 +25,7 @@ public class Step3Action {
         ImageFiles foodFiles = getFiles("/images/food");
         ImageFiles animalFiles = getFiles("/images/animal");
         ImageFiles landscapeFiles = getFiles("/images/landscape");
+
         model.addAttribute("foodFiles", foodFiles);
         model.addAttribute("animalFiles", animalFiles);
         model.addAttribute("landscapeFiles", landscapeFiles);
@@ -32,7 +33,7 @@ public class Step3Action {
     }
 
     private ImageFiles getFiles(String path) {
-        var files = new File(context.getRealPath(path)).listFiles();
+        File[] files = new File(context.getRealPath(path)).listFiles();
         return new ImageFiles(files, FileUtil.sizeOfFiles(files));
     }
 

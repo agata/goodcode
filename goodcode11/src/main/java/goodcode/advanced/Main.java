@@ -23,7 +23,7 @@ import goodcode.util.ByteArray;
 public class Main {
 	public static void main(final String[] args) throws Exception {
 		final byte[] messages = FileUtils.readFileToByteArray(new File("data.txt"));
-		var records = new MessageParser(messages)
+		List<Map<String,Object>> records = new MessageParser(messages)
 			.define(
 				field("送信日", 8).to(date),
 				field("ユーザ名", 10).to(trim),
@@ -47,9 +47,9 @@ public class Main {
 		}
 
 		public List<Map<String,Object>> parse() throws Exception {
-			var records = new ArrayList<Map<String,Object>>();
+			List<Map<String,Object>> records = new ArrayList<Map<String,Object>>();
 			while (index < bytes.getLength() - 1) {
-				final var record = new HashMap<String, Object>();
+				final Map<String, Object> record = new HashMap<String, Object>();
 				for (final Field field : fields) {
 					final String name = field.name;
 					final int length = field.length;

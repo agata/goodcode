@@ -20,15 +20,14 @@ public class Step1Action {
 
     @RequestMapping("/step1")
     public String step1(Model model) {
-        System.out.println("=============================");
-        System.out.println(context.getRealPath("/images/food"));
-        System.out.println("=============================");
-        var foodFiles = new File(context.getRealPath("/images/food")).listFiles();
-        var animalFiles = new File(context.getRealPath("/images/animal")).listFiles();
-        var landscapeFiles = new File(context.getRealPath("/images/landscape")).listFiles();
-        var foodSize = sizeOfFiles(foodFiles);
-        var animalSize = sizeOfFiles(animalFiles);
-        var landscapeSize = sizeOfFiles(landscapeFiles);
+        File[] foodFiles = new File(context.getRealPath("/images/food")).listFiles();
+        File[] animalFiles = new File(context.getRealPath("/images/animal")).listFiles();
+        File[] landscapeFiles = new File(context.getRealPath("/images/landscape")).listFiles();
+
+        long foodSize = sizeOfFiles(foodFiles);
+        long animalSize = sizeOfFiles(animalFiles);
+        long landscapeSize = sizeOfFiles(landscapeFiles);
+
         model.addAttribute("foodFiles", foodFiles);
         model.addAttribute("animalFiles", animalFiles);
         model.addAttribute("landscapeFiles", landscapeFiles);
@@ -39,8 +38,8 @@ public class Step1Action {
     }
 
     public long sizeOfFiles(File[] files) {
-        var totalSize = 0;
-        for (var file : files) {
+        long totalSize = 0;
+        for (File file : files) {
             totalSize += file.length();
         }
         return totalSize;

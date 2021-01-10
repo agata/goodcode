@@ -42,9 +42,9 @@ public class Main2 {
 		}
 
 		public List<Map<String,Object>> parse() throws Exception {
-			var records = new ArrayList<Map<String,Object>>();
+			List<Map<String,Object>> records = new ArrayList<Map<String,Object>>();
 			while (index < bytes.getLength() - 1) {
-				var record = new HashMap<String, Object>();
+				Map<String, Object> record = new HashMap<String, Object>();
 				for (Field field : fields.fields) {
 					String name = field.name;
 					int length = field.length;

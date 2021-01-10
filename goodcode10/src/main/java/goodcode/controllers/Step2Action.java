@@ -22,12 +22,14 @@ public class Step2Action {
 
     @RequestMapping("/step2")
     public String step2(Model model) {
-        var foodFiles = getFiles("/images/food");
-        var animalFiles = getFiles("/images/animal");
-        var landscapeFiles = getFiles("/images/landscape");
-        var foodSize = FileUtil.sizeOfFiles(foodFiles);
-        var animalSize = FileUtil.sizeOfFiles(animalFiles);
-        var landscapeSize = FileUtil.sizeOfFiles(landscapeFiles);
+        File[] foodFiles = getFiles("/images/food");
+        File[] animalFiles = getFiles("/images/animal");
+        File[] landscapeFiles = getFiles("/images/landscape");
+
+        long foodSize = FileUtil.sizeOfFiles(foodFiles);
+        long animalSize = FileUtil.sizeOfFiles(animalFiles);
+        long landscapeSize = FileUtil.sizeOfFiles(landscapeFiles);
+
         model.addAttribute("foodFiles", foodFiles);
         model.addAttribute("animalFiles", animalFiles);
         model.addAttribute("landscapeFiles", landscapeFiles);
@@ -38,7 +40,7 @@ public class Step2Action {
     }
 
     private File[] getFiles(String path) {
-        var files = new File(context.getRealPath(path)).listFiles();
+        File[] files = new File(context.getRealPath(path)).listFiles();
         return files;
     }
 }

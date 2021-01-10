@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import goodcode.auth.LoginAccount;
+import goodcode.entity.Todo;
 import goodcode.exception.NotFoundException;
 import goodcode.service.TodoService;
 
@@ -24,7 +25,7 @@ public class TodoController {
 
     @RequestMapping("/todo/{id}")
     public String index(Model model, @PathVariable("id") Integer id) {
-        var todo = todoService.findById(id);
+        Todo todo = todoService.findById(id);
         // 自分のToDoのみが閲覧可能
         if (todo == null
             || !todo.getAccountId().equals(loginAccount.getAccountId())) {

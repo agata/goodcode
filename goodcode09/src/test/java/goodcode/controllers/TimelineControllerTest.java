@@ -9,10 +9,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.MvcResult;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 
 import goodcode.twitter.Tweet;
 import goodcode.twitter.TwitterAPI;
+import org.springframework.ui.ModelMap;
 
 @AutoConfigureMockMvc
 @SpringBootTest
@@ -46,7 +48,7 @@ public class TimelineControllerTest {
         timelineController.twitterAPI = twitterAPI;
 
         // (5)コントローラーを実行
-        var mvcResult = mockMvc.perform(
+        MvcResult mvcResult = mockMvc.perform(
                     MockMvcRequestBuilders.get("/timeline")
                 )
                 // (6) ステータスは200のはず
@@ -56,8 +58,8 @@ public class TimelineControllerTest {
                 .andReturn();
 
         // (8) Modelにセットされたタイムラインの中身を検証
-        var modelMap = mvcResult.getModelAndView().getModelMap();
-        var tweets = (Tweet[]) modelMap.get("tweets");
+        ModelMap modelMap = mvcResult.getModelAndView().getModelMap();
+        Tweet[] tweets = (Tweet[]) modelMap.get("tweets");
         assertEquals(3, tweets.length);
     }
 

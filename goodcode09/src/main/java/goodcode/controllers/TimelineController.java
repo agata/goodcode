@@ -5,6 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import goodcode.twitter.Tweet;
 import goodcode.twitter.TwitterAPI;
 
 @Controller
@@ -15,7 +16,7 @@ public class TimelineController {
     @RequestMapping("/timeline")
     public String index(Model model) {
         // ここの呼び出しが環境依存
-        var tweets = twitterAPI.getTimeline();
+        Tweet[] tweets = twitterAPI.getTimeline();
         model.addAttribute("tweets", tweets);
         return "timeline";
     }

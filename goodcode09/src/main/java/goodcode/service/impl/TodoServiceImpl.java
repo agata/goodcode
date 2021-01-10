@@ -21,13 +21,13 @@ public class TodoServiceImpl implements TodoService {
   
 	@Override
 	public Todo findById(final Integer id) {
-		var query = "select * from todo where id = ?";
+		String query = "select * from todo where id = ?";
 		return jdbcTemplate.queryForObject(query, new Object[] {id}, new BeanPropertyRowMapper<Todo>(Todo.class));
 	}
 
 	@Override
 	public List<Todo> findByAccountId(final Integer accountId) {
-		var query = "select * from todo where account_id = ?";
+		String query = "select * from todo where account_id = ?";
 		return jdbcTemplate.query(query, new Object[] {accountId}, new BeanPropertyRowMapper<Todo>(Todo.class));
 	}
 

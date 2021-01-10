@@ -6,6 +6,7 @@ import java.io.File;
 import java.util.HashMap;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 import org.apache.commons.io.FileUtils;
 
@@ -39,7 +40,7 @@ public class Main {
 		
 		public void parse() throws Exception {
 			while (index < bytes.getLength() - 1) {
-				var record = new HashMap<String, Object>();
+				Map<String, Object> record = new HashMap<String, Object>();
 				for (Field field : fields) {
 					String name = field.name;
 					int length = field.length;

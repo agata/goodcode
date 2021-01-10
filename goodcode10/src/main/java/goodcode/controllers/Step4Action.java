@@ -31,7 +31,7 @@ public class Step4Action {
     @RequestMapping("/step4")
     public String step4(Model model) {
         List<ImageFiles> filesList = new ArrayList<ImageFiles>();
-        for (var path : PATHS) {
+        for (String path : PATHS) {
             filesList.add(getFiles(path));
         }
         model.addAttribute("filesList", filesList);
@@ -39,7 +39,7 @@ public class Step4Action {
     }
 
     private ImageFiles getFiles(String path) {
-        var files = new File(context.getRealPath(path)).listFiles();
+        File[] files = new File(context.getRealPath(path)).listFiles();
         return new ImageFiles(path, files);
     }
 
