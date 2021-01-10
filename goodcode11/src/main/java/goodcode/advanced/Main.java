@@ -22,7 +22,7 @@ import goodcode.util.ByteArray;
  */
 public class Main {
 	public static void main(final String[] args) throws Exception {
-		final byte[] messages = FileUtils.readFileToByteArray(new File("data.txt"));
+		var messages = FileUtils.readFileToByteArray(new File("data.txt"));
 		var records = new MessageParser(messages)
 			.define(
 				field("送信日", 8).to(date),
@@ -51,8 +51,8 @@ public class Main {
 			while (index < bytes.getLength() - 1) {
 				final var record = new HashMap<String, Object>();
 				for (final Field field : fields) {
-					final String name = field.name;
-					final int length = field.length;
+					var name = field.name;
+					var length = field.length;
 					Object value = getString(length);
 					for(Converter converter : field.converters) {
 						value = converter.convert(value);
@@ -66,7 +66,7 @@ public class Main {
 		}
 
 		private String getString(final int length) {
-			final String value = bytes.getString(index, length);
+			var value = bytes.getString(index, length);
 			index += length;
 			return value;
 		}

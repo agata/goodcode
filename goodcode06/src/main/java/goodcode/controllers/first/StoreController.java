@@ -1,5 +1,6 @@
 package goodcode.controllers.first;
 
+import goodcode.controllers.constant2.BaseController;
 import goodcode.entity.Account;
 import org.springframework.stereotype.Controller;
 

@@ -25,9 +25,11 @@ public class Step2Action {
         var foodFiles = getFiles("/images/food");
         var animalFiles = getFiles("/images/animal");
         var landscapeFiles = getFiles("/images/landscape");
+
         var foodSize = FileUtil.sizeOfFiles(foodFiles);
         var animalSize = FileUtil.sizeOfFiles(animalFiles);
         var landscapeSize = FileUtil.sizeOfFiles(landscapeFiles);
+
         model.addAttribute("foodFiles", foodFiles);
         model.addAttribute("animalFiles", animalFiles);
         model.addAttribute("landscapeFiles", landscapeFiles);

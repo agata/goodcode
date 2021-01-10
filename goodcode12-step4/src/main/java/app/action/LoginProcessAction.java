@@ -8,8 +8,8 @@ public class LoginProcessAction extends Action {
 
 	@Override
 	public void execute() throws Exception {
-		String loginId = request.getParameter("loginId");
-		String password = request.getParameter("password");
+		var loginId = request.getParameter("loginId");
+		var password = request.getParameter("password");
 		request.setAttribute("loginId", loginId);
 		request.setAttribute("password", password);
 		

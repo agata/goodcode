@@ -35,7 +35,7 @@ public class TimelineControllerTest {
     @Test
     public void testTimeline() throws Exception {
         // (4)モックオブジェクトを準備
-        MockTwitterAPI twitterAPI = new MockTwitterAPI();
+        var twitterAPI = new MockTwitterAPI();
         twitterAPI.tweets = new Tweet[]{
             new Tweet("普通のプログラマ", "寝ます……。"),
             new Tweet("中級プログラマ", "おやすみ"),

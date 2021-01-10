@@ -19,7 +19,7 @@ public class ListDisplayServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest req, HttpServletResponse res)
 			throws ServletException, IOException {
 		// ToDoリストの作成、実際はDBなどから取得する
-		List<Todo> todoList = new ArrayList<Todo>();
+		var todoList = new ArrayList<Todo>();
 		todoList.add(new Todo("原稿を仕上げる", "締め切りは6/1日"));
 		todoList.add(new Todo("髪を切る", "パーマかけようかな"));
 		req.setAttribute("todoList", todoList);
