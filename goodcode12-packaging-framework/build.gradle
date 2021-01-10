@@ -1,0 +1,25 @@
+plugins {
+	id 'java'
+	id 'eclipse'
+	id "org.gretty" version "3.0.3"
+}
+
+group = 'goodcode12'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '14'
+
+repositories {
+    jcenter()
+}
+
+configurations {
+    developmentOnly
+    runtimeClasspath {
+        extendsFrom developmentOnly
+    }
+}
+
+dependencies {
+    compile group: 'javax.servlet', name: 'servlet-api', version: '2.5'
+    compile group: 'javax.servlet', name: 'jstl', version: '1.2'
+}
