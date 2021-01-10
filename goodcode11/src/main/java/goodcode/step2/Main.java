@@ -14,8 +14,8 @@ import org.apache.commons.io.FileUtils;
  */
 public class Main {
 	public static void main(String[] args) throws Exception {
-		var messages = FileUtils.readFileToByteArray(new File("data.txt"));
-		var parser = new MessageParser(messages)
+		byte[] messages = FileUtils.readFileToByteArray(new File("data.txt"));
+		MessageParser parser = new MessageParser(messages)
 			.define(new Field("送信日", 8))
 			.define(new Field("ユーザ名", 10))
 			.define(new Field("メールアドレス", 20))
@@ -40,10 +40,10 @@ public class Main {
 		public void parse() throws Exception {
 			while (index < bytes.getLength() - 1) {
 				var record = new HashMap<String, Object>();
-				for (var field : fields) {
-					var name = field.name;
-					var length = field.length;
-					var value = getString(length);
+				for (Field field : fields) {
+					String name = field.name;
+					int length = field.length;
+					String value = getString(length);
 					record.put(name, value);
 				}
 				System.out.println(record);
@@ -51,7 +51,7 @@ public class Main {
 		}
 		
 		private String getString(int length) {
-			var value = bytes.getString(index, length);
+			String value = bytes.getString(index, length);
 			index += length;
 			return value;
 		}

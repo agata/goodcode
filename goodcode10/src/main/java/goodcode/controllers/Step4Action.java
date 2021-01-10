@@ -30,7 +30,7 @@ public class Step4Action {
 
     @RequestMapping("/step4")
     public String step4(Model model) {
-        var filesList = new ArrayList<ImageFiles>();
+        List<ImageFiles> filesList = new ArrayList<ImageFiles>();
         for (var path : PATHS) {
             filesList.add(getFiles(path));
         }

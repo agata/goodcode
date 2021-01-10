@@ -14,8 +14,8 @@ public class LoginProcessServlet extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse res)
 			throws ServletException, IOException {
-		var loginId = req.getParameter("loginId");
-		var password = req.getParameter("password");
+		String loginId = req.getParameter("loginId");
+		String password = req.getParameter("password");
 		req.setAttribute("loginId", loginId);
 		req.setAttribute("password", password);
 		

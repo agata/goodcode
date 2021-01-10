@@ -29,8 +29,8 @@ public class DispatcherServlet extends HttpServlet {
 
 	private void execute(HttpServletRequest req, HttpServletResponse res)
 			throws ServletException, IOException {
-		var path = req.getRequestURI().substring(req.getContextPath().length());
-		var action = findAction(path);
+		String path = req.getRequestURI().substring(req.getContextPath().length());
+		Action action = findAction(path);
 		if (action == null) {
 			res.sendError(HttpServletResponse.SC_NOT_FOUND);
 		} else {

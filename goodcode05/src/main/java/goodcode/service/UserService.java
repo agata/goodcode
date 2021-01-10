@@ -11,7 +11,7 @@ import java.util.List;
 public class UserService {
 	
 	public List<User> getUsers() {
-		var users = new ArrayList<User>();
+		List<User> users = new ArrayList<User>();
 		users.add(new User("user1"));
 		users.add(new User("user2"));
 		users.add(new User("user3"));
@@ -21,7 +21,7 @@ public class UserService {
 	}
 
 	public List<Division> getDivisions() {
-		var divs = new ArrayList<Division>();
+		List<Division> divs = new ArrayList<Division>();
 		divs.add(new Division("1", "div1"));
 		divs.add(new Division("2", "div2"));
 		divs.add(new Division("3", "div3"));

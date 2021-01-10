@@ -11,8 +11,8 @@ public class LoginProcessAction extends Action {
 
 	@Override
 	public void execute(HttpServletRequest req, HttpServletResponse res) throws Exception {
-		var loginId = req.getParameter("loginId");
-		var password = req.getParameter("password");
+		String loginId = req.getParameter("loginId");
+		String password = req.getParameter("password");
 		req.setAttribute("loginId", loginId);
 		req.setAttribute("password", password);
 		

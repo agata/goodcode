@@ -23,13 +23,13 @@ public class SampleTest extends TestCase {
 	
 	@Override
 	protected void setUp() throws Exception {
-		var messages = FileUtils.readFileToByteArray(new File("data.txt"));
+		byte[] messages = FileUtils.readFileToByteArray(new File("data.txt"));
 		parser = new MessageParser(messages, Main2.fields);
 	}
 	
 	@Test
 	public void testParse() throws Exception {
-		var records = parser.parse();
+		List<Map<String, Object>> records = parser.parse();
 		assertEquals("データ件数のチェック", 5, records.size());
 		assertEquals("1件目", 
 				makeRecord(2008, 11, 1, 10, "user1", "user1@examples.com"), 
@@ -50,9 +50,9 @@ public class SampleTest extends TestCase {
 	
 	private Map<String, Object> makeRecord(int year, int month, int day, int point,
 			String userName, String mailAddress) {
-		var record = new HashMap<String, Object>();
-		var cal = new GregorianCalendar(year, month - 1, day);
-		var sendDate = cal.getTime();
+		Map<String, Object> record = new HashMap<String, Object>();
+		GregorianCalendar cal = new GregorianCalendar(year, month - 1, day);
+		Date sendDate = cal.getTime();
 		record.put("送信日", sendDate);
 		record.put("ポイント", point);
 		record.put("ユーザ名", userName);

@@ -25,7 +25,6 @@ public class Step3Action {
         ImageFiles foodFiles = getFiles("/images/food");
         ImageFiles animalFiles = getFiles("/images/animal");
         ImageFiles landscapeFiles = getFiles("/images/landscape");
-
         model.addAttribute("foodFiles", foodFiles);
         model.addAttribute("animalFiles", animalFiles);
         model.addAttribute("landscapeFiles", landscapeFiles);

@@ -25,7 +25,6 @@ public class TodoController {
     @RequestMapping("/todo/{id}")
     public String index(Model model, @PathVariable("id") Integer id) {
         var todo = todoService.findById(id);
-
         // 自分のToDoのみが閲覧可能
         if (todo == null
             || !todo.getAccountId().equals(loginAccount.getAccountId())) {

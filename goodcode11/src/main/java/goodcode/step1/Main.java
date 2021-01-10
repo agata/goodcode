@@ -16,8 +16,8 @@ import org.apache.commons.lang3.StringUtils;
  */
 public class Main {
 	public static void main(String[] args) throws Exception {
-		var messages = FileUtils.readFileToByteArray(new File("data.txt"));
-		var parser = new MessageParser(messages);
+		byte[] messages = FileUtils.readFileToByteArray(new File("data.txt"));
+		MessageParser parser = new MessageParser(messages);
 		parser.parse();
 	}
 
@@ -41,7 +41,7 @@ public class Main {
 		}
 		
 		private String getString(int length) {
-			var value = bytes.getString(index, length);
+			String value = bytes.getString(index, length);
 			index += length;
 			return value;
 		}

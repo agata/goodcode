@@ -37,8 +37,8 @@ public class DispatcherServlet extends HttpServlet {
 
 	private void execute(HttpServletRequest req, HttpServletResponse res)
 			throws ServletException, IOException {
-		var path = req.getRequestURI().substring(req.getContextPath().length());
-		var action = findAction(path);
+		String path = req.getRequestURI().substring(req.getContextPath().length());
+		Action action = findAction(path);
 		if (action == null) {
 			res.sendError(HttpServletResponse.SC_NOT_FOUND);
 		} else {
@@ -56,9 +56,9 @@ public class DispatcherServlet extends HttpServlet {
 		if (!route.containsKey(path)) {
 			return null;
 		}
-		var className = route.getProperty(path);
+		String className = route.getProperty(path);
 		try {
-			var clazz = Class.forName(className);
+			Class<?> clazz = Class.forName(className);
 			return (Action) clazz.newInstance();
 		} catch (Exception e) {
 			throw new ServletException("アクションの生成に失敗しました", e);

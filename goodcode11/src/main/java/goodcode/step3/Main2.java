@@ -26,8 +26,8 @@ public class Main2 {
 
 
 	public static void main(String[] args) throws Exception {
-		var messages = FileUtils.readFileToByteArray(new File("data.txt"));
-		var parser = new MessageParser(messages, fields);
+		byte[] messages = FileUtils.readFileToByteArray(new File("data.txt"));
+		MessageParser parser = new MessageParser(messages, fields);
 		parser.parse();
 	}
 
@@ -45,12 +45,12 @@ public class Main2 {
 			var records = new ArrayList<Map<String,Object>>();
 			while (index < bytes.getLength() - 1) {
 				var record = new HashMap<String, Object>();
-				for (var field : fields.fields) {
-					var name = field.name;
-					var length = field.length;
-					var converter = field.converter;
-					var value = getString(length);
-					var newValue = converter.convert(value);
+				for (Field field : fields.fields) {
+					String name = field.name;
+					int length = field.length;
+					Converter converter = field.converter;
+					String value = getString(length);
+					Object newValue = converter.convert(value);
 					record.put(name, newValue);
 				}
 				records.add(record);
@@ -59,7 +59,7 @@ public class Main2 {
 		}
 		
 		private String getString(int length) {
-			var value = bytes.getString(index, length);
+			String value = bytes.getString(index, length);
 			index += length;
 			return value;
 		}
