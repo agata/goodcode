@@ -6,7 +6,7 @@ plugins {
 
 group = 'goodcode'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '14'
+sourceCompatibility = '15'
 
 repositories {
 	mavenCentral()
