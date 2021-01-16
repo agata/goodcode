@@ -59,7 +59,7 @@ public class DispatcherServlet extends HttpServlet {
 		String className = route.getProperty(path);
 		try {
 			Class<?> clazz = Class.forName(className);
-			return (Action) clazz.newInstance();
+			return (Action) clazz.getDeclaredConstructor().newInstance();
 		} catch (Exception e) {
 			throw new ServletException("アクションの生成に失敗しました", e);
 		}

@@ -26,3 +26,19 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
     developmentOnly "org.springframework.boot:spring-boot-devtools"
 }
+
+task country(type: JavaExec) {
+  classpath = sourceSets.main.runtimeClasspath
+  main = 'goodcode.country.Main'
+}
+
+task countryAfter(type: JavaExec) {
+  classpath = sourceSets.main.runtimeClasspath
+  main = 'goodcode.country.MainAfter'
+}
+
+task list(type: JavaExec) {
+  classpath = sourceSets.main.runtimeClasspath
+  main = 'goodcode.list.Main'
+}
+

@@ -1,7 +1,6 @@
 plugins {
 	id 'java'
 	id 'eclipse'
-	id "org.gretty" version "3.0.3"
 }
 
 group = 'goodcode12'
@@ -20,7 +19,9 @@ configurations {
 }
 
 dependencies {
-    compile group: 'javax.servlet', name: 'servlet-api', version: '2.5'
-    compile group: 'javax.servlet', name: 'jstl', version: '1.2'
-    compile files('../goodcode12-packaging-framework/build/libs/goodcode12-0.0.1-SNAPSHOT.jar')
+}
+
+task refrect(type: JavaExec) {
+  classpath = sourceSets.main.runtimeClasspath
+  main = 'goodcode.refrect.Main'
 }

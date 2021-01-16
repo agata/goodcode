@@ -33,3 +33,8 @@ dependencies {
 test {
 	useJUnitPlatform()
 }
+
+task calc(type: JavaExec) {
+  classpath = sourceSets.main.runtimeClasspath
+  main = 'goodcode.calc.Main'
+}
