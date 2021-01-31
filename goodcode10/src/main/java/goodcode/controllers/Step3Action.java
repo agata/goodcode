@@ -34,16 +34,22 @@ public class Step3Action {
 
     private ImageFiles getFiles(String path) {
         File[] files = new File(context.getRealPath(path)).listFiles();
-        return new ImageFiles(files, FileUtil.sizeOfFiles(files));
+        return new ImageFiles(path, files);
     }
 
     public static class ImageFiles {
+        private final String path;
         private final File[] files;
         private long size;
 
-        public ImageFiles(File[] files, long size) {
+        public ImageFiles(String path, File[] files) {
+            this.path = path;
             this.files = files;
-            this.size = size;
+            this.size = FileUtil.sizeOfFiles(files);
+        }
+
+        public String getPath() {
+            return this.path;
         }
 
         public File[] getFiles() {
