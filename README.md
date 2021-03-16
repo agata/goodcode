@@ -34,8 +34,8 @@ https://github.com/agata/goodcode/tree/v1
 
 インストール後以下のコマンドでJavaのバージョンが15と表示されればインストール成功です。
 
-```
-java --version
+```bash
+$ java --version
 ```
 
 ### nodeのセットアップ
@@ -44,8 +44,8 @@ java --version
 
 インストール後以下のコマンドでnodeのバージョンが表示されればインストール成功です。
 
-```
-node -v
+```bash
+$ node -v
 ```
 
 ## サンプルコードの構成
@@ -91,8 +91,8 @@ node -v
 1. コマンドプロンプト（Windows）かターミナル（Linux/Mac OS X）で、`goodcode05` ディレクトリに移動します。
 2. 次のコマンドを実行します。
 
-```
-./gradlew bootRun
+```bash
+$ ./gradlew bootRun
 ```
 
 3. http://localhost:8080/goodcode05/ にブラウザでアクセスします。
@@ -108,14 +108,14 @@ node -v
 
 **ステップ1　データベースのデータ構造をそのまま利用する**
 
-```
-npm run step1
+```bash
+$ npm run step1
 ```
 
 **ステップ3　最適なデータ構造に変換して利用する**
 
-```
-npm run step3
+```bash
+$ npm run step3
 ```
 
 ### 第8章　コードのパフォーマンス
@@ -125,20 +125,20 @@ npm run step3
 
 **リスト8.1	国別の出現数をカウントするコード（breakなし）の実行**
 
-```
-./gradlew country
+```bash
+$ ./gradlew country
 ```
 
 **リスト8.1	国別の出現数をカウントするコード（breakあり）の実行**
 
-```
-./gradlew countryAfter
+```bash
+$ ./gradlew countryAfter
 ```
 
 **リスト8.2	ArrayListとLinkedListの実行**
 
-```
-./gradlew list
+```bash
+$ ./gradlew list
 ```
 
 ### 第9章　ユニットテスト
@@ -148,34 +148,34 @@ npm run step3
 
 **ユニットテストを使わないテストコードの実行**
 
-```
-./gradlew calc
+```bash
+$ ./gradlew calc
 ```
 
 **ユニットテストを使ったテストコードの実行**
 
-```
+```bash
 ./gradlew test --tests goodcode.calc.CalcTest
 ```
 
 **お題　Webアプリケーションのセキュリティテストのテストコードの実行**
 
-```
-./gradlew test --tests goodcode.controllers.TodoControllerTest
+```bash
+$ ./gradlew test --tests goodcode.controllers.TodoControllerTest
 ```
 
 **お題　Webアプリケーションのセキュリティテストのアプリケーションの実行**
 
-```
-./gradlew bootRun
+```bash
+$ ./gradlew bootRun
 ```
 
 その後 http://localhost:8080/goodcode09/ にブラウザでアクセスします。
 
 **考察　テストしにくい部分はどうする？　モックオブジェクト**
 
-```
-./gradlew test --tests goodcode.controllers.TimelineControllerTest
+```bash
+$ ./gradlew test --tests goodcode.controllers.TimelineControllerTest
 ```
 
 ### 第10章　抽象化
@@ -183,8 +183,8 @@ npm run step3
 1. コマンドプロンプト（Windows）かターミナル（Linux/Mac OS X）で、`goodcode10`ディレクトリに移動します。
 2. 次のコマンドを実行します。
 
-```
-./gradlew bootRun
+```bash
+$ ./gradlew bootRun
 ```
 
 3. http://localhost:8080/ にブラウザでアクセスします。
@@ -196,26 +196,26 @@ npm run step3
 
 **ステップ1　ベタなコードで書いてみる**
 
-```
-./gradlew step1
+```bash
+$ ./gradlew step1
 ```
 
 **ステップ2　メタデータをExcelに移動する**
 
-```
-./gradlew step2
+```bash
+$ ./gradlew step2
 ```
 
 **ステップ3　リフレクションAPIで変換ルールを動的に適用する**
 
-```
-./gradlew step3
+```bash
+$ ./gradlew step3
 ```
 
 **考察 DSLの構文を改善するには？もっとDSLっぽくする**
 
-```
-./gradlew advanced
+```bash
+$ ./gradlew advanced
 ```
 
 ### 第12章　フレームワークを作ろう
@@ -225,8 +225,8 @@ npm run step3
 1. コマンドプロンプト（Windows）かターミナル（Linux/Mac OS X）で、`goodcode11-step1` 〜 `goodcode11-step4` ディレクトリに移動します。
 2. 次のコマンドを実行します。
 
-```
-./gradlew appRun
+```bash
+$ ./gradlew appRun
 ```
 
 3. http://localhost:8080/goodcode12/ にブラウザでアクセスします。
@@ -235,8 +235,8 @@ npm run step3
 
 ##### 1. フレームワークのJARファイルを生成
 
-```
-./gradlew clean jar
+```bash
+$ ./gradlew clean jar
 ```
 
 `buid/libs/goodcode12-0.0.1-SNAPSHOT.jar` にJARファイルが生成されます。
@@ -245,9 +245,9 @@ npm run step3
 
 JARファイルが生成できたら以下のようにアプリケーションコードのディレクトリに移動して実行します。アプリケーションコード側の`build.gradle`にはさきほど生成したJARファイルに対して依存が追加されています。
 
-```
-cd ../goodcode12-packaging-application/
-./gradlew appRun
+```bash
+$ cd ../goodcode12-packaging-application/
+$ ./gradlew appRun
 ```
 
 その後 http://localhost:8080/goodcode12/ をブラウザで開きます。
@@ -257,6 +257,6 @@ cd ../goodcode12-packaging-application/
 1. コマンドプロンプト（Windows）かターミナル（Linux/Mac OS X）で、`goodcode12-refrect-api`ディレクトリに移動します。
 2. 次のコマンドを実行します。
 
-```
-./gradlew refrect
+```bash
+$ ./gradlew refrect
 ```
