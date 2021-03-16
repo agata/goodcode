@@ -39,7 +39,7 @@ $ java --version
 
 ### nodeのセットアップ
 
-7章のサンプルコードの実行のみnodeの環境が必要です。
+第7章のサンプルコードの実行のみnodeの環境が必要です。
 https://nodejs.org/ja/download/ よりnodeのバージョン14系をダウンロードしてインストールしてください。
 
 インストール後、以下のコマンドでnodeのバージョンが表示されればインストール成功です。
@@ -54,20 +54,20 @@ $ node -v
 
 サンプルコードは、次のディレクトリごとに、Gradleのプロジェクトとして格納されています。Gradleの実行ファイルは各ディレクトリに配置されているためインストールは不要です。
 
-* `goodcode05` 5章 コードの分割
-* `goodcode06` 6章 コードの集約
-* `goodcode07` 7章 データ構造
-* `goodcode08` 8章 パフォーマンス
-* `goodcode09` 9章 ユニットテスト
-* `goodcode10` 10章 抽象化
-* `goodcode11` 11章 メタプログラミング
-* `goodcode12-step1` 12章 フレームワークを作ろう ステップ1
-* `goodcode12-step2` 12章 フレームワークを作ろう ステップ2
-* `goodcode12-step3` 12章 フレームワークを作ろう ステップ3
-* `goodcode12-step4` 12章 フレームワークを作ろう ステップ4
-* `goodcode12-packaging-framework` 12章 フレームワークを作ろう ステップ5 フレームワーク
-* `goodcode12-packaging-application` 12章 フレームワークを作ろう ステップ5 アプリケーション
-* `goodcode12-refrect-api` 12章 Column：JavaのリフレクションAPI
+* `goodcode05` 第5章 コードの分割
+* `goodcode06` 第6章 コードの集約
+* `goodcode07` 第7章 データ構造
+* `goodcode08` 第8章 パフォーマンス
+* `goodcode09` 第9章 ユニットテスト
+* `goodcode10` 第10章 抽象化
+* `goodcode11` 第11章 メタプログラミング
+* `goodcode12-step1` 第12章 フレームワークを作ろう ステップ1
+* `goodcode12-step2` 第12章 フレームワークを作ろう ステップ2
+* `goodcode12-step3` 第12章 フレームワークを作ろう ステップ3
+* `goodcode12-step4` 第12章 フレームワークを作ろう ステップ4
+* `goodcode12-packaging-framework` 第12章 フレームワークを作ろう ステップ5 フレームワーク
+* `goodcode12-packaging-application` 第12章 フレームワークを作ろう ステップ5 アプリケーション
+* `goodcode12-refrect-api` 第12章 Column：JavaのリフレクションAPI
 
 ### 各プロジェクトの構成
 
