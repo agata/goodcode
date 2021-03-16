@@ -13,8 +13,6 @@
 * WEB+DB PRESS plusシリーズ<br>
   http://wdpress.gihyo.jp/plus
 
-* 公式タグ<br>
-  goodcode
 
 ## 初版のサンプルコードについて
 
