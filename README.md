@@ -8,10 +8,10 @@
 技術評論社、2021年
 
 * サポートページ<br>
-  http://gihyo.jp/book/2011/978-4-7741-4596-9/support
+  https://gihyo.jp/book/2021/978-4-297-12048-1/support
 
 * WEB+DB PRESS plusシリーズ<br>
-  http://wdpress.gihyo.jp/plus
+  https://wdpress.gihyo.jp/plus
 
 ## 初版のサンプルコード
 
