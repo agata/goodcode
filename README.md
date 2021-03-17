@@ -229,6 +229,8 @@ http://localhost:8080/goodcode12/ にブラウザでアクセスします。
 
 ##### 1. フレームワークのJARファイルを生成
 
+コマンドプロンプト（Windows）かターミナル（Linux/Mac OS X）で `goodcode12-packaging-framework` ディレクトリに移動し、次のコマンドを実行します。
+
 ```bash
 $ ./gradlew clean jar
 ```
@@ -237,7 +239,8 @@ $ ./gradlew clean jar
 
 ##### 2. 生成したJARファイルを使ってアプリケーションコードを実行
 
-JARファイルが生成できたら以下のようにアプリケーションコードのディレクトリに移動して実行します。アプリケーションコード側の`build.gradle`にはさきほど生成したJARファイルに対して依存が追加されています。
+JARファイルが生成できたら、次のようにアプリケーションコードの`goodcode12-packaging-application`ディレクトリに移動して実行します。
+アプリケーションコード側の`build.gradle`には、先ほど生成したJARファイルに対して依存が追加されています。
 
 ```bash
 $ cd ../goodcode12-packaging-application/
