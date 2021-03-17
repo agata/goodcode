@@ -244,7 +244,7 @@ $ cd ../goodcode12-packaging-application/
 $ ./gradlew appRun
 ```
 
-その後 http://localhost:8080/goodcode12/ をブラウザで開きます。
+http://localhost:8080/goodcode12/ にブラウザでアクセスします。
 
 #### Column：JavaのリフレクションAPI
 
