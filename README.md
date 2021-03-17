@@ -89,14 +89,13 @@ Gradleの実行ファイルは各ディレクトリに配置されているた�
 
 ### 第5章  コードの分割
 
-1. コマンドプロンプト（Windows）かターミナル（Linux/Mac OS X）で、`goodcode05` ディレクトリに移動します。
-2. 次のコマンドを実行します。
+コマンドプロンプト（Windows）かターミナル（Linux/Mac OS X）で `goodcode05` ディレクトリに移動し、次のコマンドを実行します。
 
 ```bash
 $ ./gradlew bootRun
 ```
 
-3. http://localhost:8080/goodcode05/ にブラウザでアクセスします。
+http://localhost:8080/goodcode05/ にブラウザでアクセスします。
 
 ### 第6章  コードの集約
 
@@ -104,8 +103,7 @@ $ ./gradlew bootRun
 
 ### 第7章  データ構造
 
-1. コマンドプロンプト（Windows）かターミナル（Linux/Mac OS X）で、`goodcode07` ディレクトリに移動します。
-2. 次のコマンドを実行します。
+コマンドプロンプト（Windows）かターミナル（Linux/Mac OS X）で `goodcode07` ディレクトリに移動し、次のコマンドを実行します。
 
 **ステップ1　データベースのデータ構造をそのまま利用する**
 
@@ -121,8 +119,7 @@ $ npm run step3
 
 ### 第8章　コードのパフォーマンス
 
-1. コマンドプロンプト（Windows）かターミナル（Linux/Mac OS X）で、`goodcode08`ディレクトリに移動します。
-2. 次のコマンドを実行します。
+コマンドプロンプト（Windows）かターミナル（Linux/Mac OS X）で `goodcode08` ディレクトリに移動し、次のコマンドを実行します。
 
 **リスト8.1　国別の出現数をカウントするコード（breakなし）の実行**
 
@@ -144,8 +141,7 @@ $ ./gradlew list
 
 ### 第9章　ユニットテスト
 
-1. コマンドプロンプト（Windows）かターミナル（Linux/Mac OS X）で、`goodcode09` ディレクトリに移動します。
-2. 次のコマンドを実行します。
+コマンドプロンプト（Windows）かターミナル（Linux/Mac OS X）で `goodcode09` ディレクトリに移動し、次のコマンドを実行します。
 
 **ユニットテストを使わないテストコードの実行**
 
@@ -171,7 +167,7 @@ $ ./gradlew test --tests goodcode.controllers.TodoControllerTest
 $ ./gradlew bootRun
 ```
 
-その後 http://localhost:8080/goodcode09/ にブラウザでアクセスします。
+その後、 http://localhost:8080/goodcode09/ にブラウザでアクセスします。
 
 **考察　テストしにくい部分はどうする？　モックオブジェクト**
 
@@ -181,19 +177,17 @@ $ ./gradlew test --tests goodcode.controllers.TimelineControllerTest
 
 ### 第10章　抽象化
 
-1. コマンドプロンプト（Windows）かターミナル（Linux/Mac OS X）で、`goodcode10`ディレクトリに移動します。
-2. 次のコマンドを実行します。
+コマンドプロンプト（Windows）かターミナル（Linux/Mac OS X）で `goodcode10` ディレクトリに移動し、次のコマンドを実行します。
 
 ```bash
 $ ./gradlew bootRun
 ```
 
-3. http://localhost:8080/ にブラウザでアクセスします。
+http://localhost:8080/ にブラウザでアクセスします。
 
 ### 第11章　メタプログラミング
 
-1. コマンドプロンプト（Windows）かターミナル（Linux/Mac OS X）で、`goodcode11` ディレクトリに移動します。
-2. 次のコマンドを実行します。
+コマンドプロンプト（Windows）かターミナル（Linux/Mac OS X）で `goodcode11` ディレクトリに移動し、次のコマンドを実行します。
 
 **ステップ1　ベタなコードで書いてみる**
 
@@ -223,14 +217,13 @@ $ ./gradlew advanced
 
 #### ステップ1〜ステップ4までを実行
 
-1. コマンドプロンプト（Windows）かターミナル（Linux/Mac OS X）で、`goodcode11-step1` 〜 `goodcode11-step4` ディレクトリに移動します。
-2. 次のコマンドを実行します。
+コマンドプロンプト（Windows）かターミナル（Linux/Mac OS X）で `goodcode11-step1` 〜 `goodcode11-step4` ディレクトリに移動し、次のコマンドを実行します。
 
 ```bash
 $ ./gradlew appRun
 ```
 
-3. http://localhost:8080/goodcode12/ にブラウザでアクセスします。
+http://localhost:8080/goodcode12/ にブラウザでアクセスします。
 
 #### ステップ5 フレームワークをパッケージングする
 
@@ -255,8 +248,7 @@ $ ./gradlew appRun
 
 #### Column：JavaのリフレクションAPI
 
-1. コマンドプロンプト（Windows）かターミナル（Linux/Mac OS X）で、`goodcode12-refrect-api`ディレクトリに移動します。
-2. 次のコマンドを実行します。
+コマンドプロンプト（Windows）かターミナル（Linux/Mac OS X）で `goodcode12-refrect-api` ディレクトリに移動し、次のコマンドを実行します。
 
 ```bash
 $ ./gradlew refrect
