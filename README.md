@@ -217,7 +217,7 @@ $ ./gradlew advanced
 
 #### ステップ1〜ステップ4までを実行
 
-コマンドプロンプト（Windows）かターミナル（Linux/Mac OS X）で `goodcode11-step1` 〜 `goodcode11-step4` ディレクトリに移動し、次のコマンドを実行します。
+コマンドプロンプト（Windows）かターミナル（Linux/Mac OS X）で `goodcode12-step1` 〜 `goodcode12-step4` ディレクトリに移動し、次のコマンドを実行します。
 
 ```bash
 $ ./gradlew appRun
