@@ -124,19 +124,19 @@ $ npm run step3
 1. コマンドプロンプト（Windows）かターミナル（Linux/Mac OS X）で、`goodcode08`ディレクトリに移動します。
 2. 次のコマンドを実行します。
 
-**リスト8.1	国別の出現数をカウントするコード（breakなし）の実行**
+**リスト8.1　国別の出現数をカウントするコード（breakなし）の実行**
 
 ```bash
 $ ./gradlew country
 ```
 
-**リスト8.1	国別の出現数をカウントするコード（breakあり）の実行**
+**リスト8.1　国別の出現数をカウントするコード（breakあり）の実行**
 
 ```bash
 $ ./gradlew countryAfter
 ```
 
-**リスト8.2	ArrayListとLinkedListの実行**
+**リスト8.2　ArrayListとLinkedListの実行**
 
 ```bash
 $ ./gradlew list
