@@ -1,0 +1,55 @@
+plugins {
+	id 'java'
+	id 'eclipse'
+}
+
+group = 'goodcode11'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '15'
+
+repositories {
+	mavenCentral()
+}
+
+configurations {
+    developmentOnly
+    runtimeClasspath {
+        extendsFrom developmentOnly
+    }
+}
+
+dependencies {
+    compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.11'
+	compile group: 'commons-io', name: 'commons-io', version: '2.8.0'
+    testCompile group: 'junit', name: 'junit', version: '4.13.1'
+}
+
+task step1(type: JavaExec) {
+  classpath = sourceSets.main.runtimeClasspath
+  main = 'goodcode.step1.Main'
+}
+
+task step2(type: JavaExec) {
+  classpath = sourceSets.main.runtimeClasspath
+  main = 'goodcode.step2.Main'
+}
+
+task step3(type: JavaExec) {
+  classpath = sourceSets.main.runtimeClasspath
+  main = 'goodcode.step3.Main'
+}
+
+task step4(type: JavaExec) {
+  classpath = sourceSets.main.runtimeClasspath
+  main = 'goodcode.step4.Main'
+}
+
+task advanced(type: JavaExec) {
+  classpath = sourceSets.main.runtimeClasspath
+  main = 'goodcode.advanced.Main'
+}
+
+task refrect(type: JavaExec) {
+  classpath = sourceSets.main.runtimeClasspath
+  main = 'goodcode.refrect.Main'
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta http-equiv="Content-Script-Type" content="text/JavaScript" />
+  <link th:href="@{/css/default.css}" rel="stylesheet" type="text/css" media="screen,projection" charset="utf-8" />
+</head>
+<body>
+<h1>ToDo List</h1>
+<h2>Login</h2>
+<form action="#" th:action="@{/login}" th:object="${loginForm}" method="post">
+<table border="1">
+  <tr>
+    <th>Account ID</th>
+    <td><input type="text" th:field="*{accountId}" maxlength="20" /></td>
+  </tr>
+  <tr>
+    <th></th>
+    <td><input type="submit" value="Login"/></td>
+  </tr>
+</table>
+</form>
+Account ID : 10000 or 10001 or 10002
+</body>
+</html>

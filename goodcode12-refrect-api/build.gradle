@@ -1,0 +1,27 @@
+plugins {
+	id 'java'
+	id 'eclipse'
+}
+
+group = 'goodcode12'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '15'
+
+repositories {
+    jcenter()
+}
+
+configurations {
+    developmentOnly
+    runtimeClasspath {
+        extendsFrom developmentOnly
+    }
+}
+
+dependencies {
+}
+
+task refrect(type: JavaExec) {
+  classpath = sourceSets.main.runtimeClasspath
+  main = 'goodcode.refrect.Main'
+}

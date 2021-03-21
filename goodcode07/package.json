@@ -1,0 +1,11 @@
+{
+  "name": "goodcode10-data-structure",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "step1": "node src/step1.js",
+    "step3": "node src/step3.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
