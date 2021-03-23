@@ -29,7 +29,7 @@ https://github.com/agata/goodcode/tree/v1
 ### Java 15のセットアップ
 
 サンプルコードの実行にはJava 15が必要です。
-https://jdk.java.net/15/ よりJava 15をダウンロードしてインストールしてください。
+[AdoptOpenJDK](https://adoptopenjdk.net/archive.html?variant=openjdk15&jvmVariant=hotspot) のページよりJava 15 JDKをダウンロードしてインストールしてください。
 
 インストール後、以下のコマンドでJavaのバージョンが15と表示されればインストール成功です。
 
@@ -95,7 +95,7 @@ Gradleの実行ファイルは各ディレクトリに配置されているた�
 $ ./gradlew bootRun
 ```
 
-http://localhost:8080/goodcode05/ にブラウザでアクセスします。
+http://localhost:8080/ にブラウザでアクセスします。
 
 ### 第6章  コードの集約
 
@@ -152,7 +152,7 @@ $ ./gradlew calc
 **ユニットテストを使ったテストコードの実行**
 
 ```bash
-./gradlew test --tests goodcode.calc.CalcTest
+$ ./gradlew test --tests goodcode.calc.CalcTest
 ```
 
 **お題　Webアプリケーションのセキュリティテストのテストコードの実行**
@@ -167,7 +167,7 @@ $ ./gradlew test --tests goodcode.controllers.TodoControllerTest
 $ ./gradlew bootRun
 ```
 
-その後、 http://localhost:8080/goodcode09/ にブラウザでアクセスします。
+その後、 http://localhost:8080/ にブラウザでアクセスします。
 
 **考察　テストしにくい部分はどうする？　モックオブジェクト**
 
@@ -195,13 +195,13 @@ http://localhost:8080/ にブラウザでアクセスします。
 $ ./gradlew step1
 ```
 
-**ステップ2　メタデータをExcelに移動する**
+**ステップ2　メタデータを内部DSLに移動する**
 
 ```bash
 $ ./gradlew step2
 ```
 
-**ステップ3　リフレクションAPIで変換ルールを動的に適用する**
+**ステップ3　変換ルールに対応する**
 
 ```bash
 $ ./gradlew step3
