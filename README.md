@@ -8,7 +8,7 @@
 技術評論社、2021年
 
 * サポートページ<br>
-  2021年3月現在、増補改訂のサポートページは出版準備中のためURLは未定。URLが決定次第反映させます。
+  https://gihyo.jp/book/2021/978-4-297-12048-1
 
 * WEB+DB PRESS plusシリーズ<br>
   https://wdpress.gihyo.jp/plus
