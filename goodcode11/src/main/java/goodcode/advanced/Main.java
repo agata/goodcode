@@ -49,7 +49,7 @@ public class Main {
 		public List<Map<String,Object>> parse() throws Exception {
 			List<Map<String,Object>> records = new ArrayList<Map<String,Object>>();
 			while (index < bytes.getLength() - 1) {
-				final Map<String, Object> record = new HashMap<String, Object>();
+				final Map<String, Object> record = new HashMap<>();
 				for (final Field field : fields) {
 					final String name = field.name;
 					final int length = field.length;

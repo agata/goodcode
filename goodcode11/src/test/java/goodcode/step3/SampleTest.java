@@ -50,7 +50,7 @@ public class SampleTest extends TestCase {
 	
 	private Map<String, Object> makeRecord(int year, int month, int day, int point,
 			String userName, String mailAddress) {
-		Map<String, Object> record = new HashMap<String, Object>();
+		Map<String, Object> record = new HashMap<>();
 		GregorianCalendar cal = new GregorianCalendar(year, month - 1, day);
 		Date sendDate = cal.getTime();
 		record.put("送信日", sendDate);

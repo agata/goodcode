@@ -34,7 +34,7 @@ public class XmlApiController {
         writeDocument(response, doc);
     }
 
-    private Document buildDocument(List<Division> divs, List<User> users)
+    public Document buildDocument(List<Division> divs, List<User> users)
     		throws ParserConfigurationException {
         int rowIndex = 1;
         // (1)XMLを作成するためにDocumentオブジェクトを準備
