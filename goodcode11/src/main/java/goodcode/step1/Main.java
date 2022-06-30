@@ -32,7 +32,7 @@ public class Main {
 		
 		public void parse() {
 			while (index < bytes.getLength() - 1) {
-				Map<String, Object> record = new HashMap<String, Object>();
+				Map<String, Object> record = new HashMap<>();
 				record.put("送信日", toDate(getString(8)));
 				record.put("ユーザ名", trim(getString(10)));
 				record.put("メールアドレス", trim(getString(20)));

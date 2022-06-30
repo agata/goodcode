@@ -44,7 +44,7 @@ public class Main2 {
 		public List<Map<String,Object>> parse() throws Exception {
 			List<Map<String,Object>> records = new ArrayList<Map<String,Object>>();
 			while (index < bytes.getLength() - 1) {
-				Map<String, Object> record = new HashMap<String, Object>();
+				Map<String, Object> record = new HashMap<>();
 				for (Field field : fields.fields) {
 					String name = field.name;
 					int length = field.length;

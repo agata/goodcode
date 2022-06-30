@@ -44,7 +44,7 @@ public class Main {
 		
 		public void parse() throws Exception {
 			while (index < bytes.getLength() - 1) {
-				Map<String, Object> record = new HashMap<String, Object>();
+				Map<String, Object> record = new HashMap<>();
 				for (Field field : fields) {
 					String name = field.name;
 					int length = field.length;

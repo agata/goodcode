@@ -13,11 +13,15 @@
 * WEB+DB PRESS plusシリーズ<br>
   https://wdpress.gihyo.jp/plus
 
-## 初版のサンプルコード
+## 過去のサンプルコード
 
-このサンプルコードは増補改訂のものです。
-初版のサンプルコードは以下にあります。
+このサンプルコードは増補改訂第2刷のものです。
+過去のサンプルコードは以下にあります。
 
+増補改訂第1刷
+https://github.com/agata/goodcode/tree/v2
+
+初版
 https://github.com/agata/goodcode/tree/v1
 
 ## サンプルコードのライセンス

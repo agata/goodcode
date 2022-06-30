@@ -57,7 +57,7 @@ public class XmlApiController {
             this.divs = divs;
             this.users = users;
         }
-        private Document buildDocument() throws Exception {
+        public Document buildDocument() throws Exception {
             Document doc = newDocument();
             Element rootNode = doc.createElement("data");
             doc.appendChild(rootNode);
